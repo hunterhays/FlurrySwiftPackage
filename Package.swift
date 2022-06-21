@@ -13,15 +13,15 @@ let package = Package(
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
             name: "Flurry",
-            targets: ["Flurry","CrashReporter"]
+            targets: ["Flurry_iOS_SDK","CrashReporter"]
         ),
         .library(
             name: "FlurryMessaging",
-            targets: ["FlurryMessaging"]
+            targets: ["Flurry_Messaging"]
         ),
         .library(
             name: "FlurryConfig",
-            targets: ["FlurryConfig"]
+            targets: ["Flurry_Config"]
         ),
     ],
     dependencies: [
@@ -32,16 +32,16 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .binaryTarget(
-            name: "Flurry",
-            path: "artifacts/Flurry.xcframework"
+            name: "Flurry_iOS_SDK",
+            path: "artifacts/Flurry_iOS_SDK.xcframework"
         ),
         .binaryTarget(
-            name: "FlurryMessaging",
-            path: "artifacts/FlurryMessaging.xcframework"
+            name: "Flurry_Messaging",
+            path: "artifacts/Flurry_Messaging.xcframework"
         ),
         .binaryTarget(
-            name: "FlurryConfig",
-            path: "artifacts/FlurryConfig.xcframework"
+            name: "Flurry_Config",
+            path: "artifacts/Flurry_Config.xcframework"
         ),
         .binaryTarget(
             name: "CrashReporter",
